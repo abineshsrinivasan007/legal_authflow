@@ -1,0 +1,40 @@
+# Logs
+*.log
+BackEnd/legal_suite.log
+FrontEnd/npm-debug.log*
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+BackEnd/venv/
+
+# Dependency directories
+node_modules/
+FrontEnd/node_modules/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / Distribution
+dist/
+build/
+FrontEnd/dist/
+
+# SQLite Database
+db.sqlite3
+BackEnd/db.sqlite3
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project Caches
+BackEnd/hybrid_cache.json
+BackEnd/mistral_cache.json
+FrontEnd/mistral_cache.json
