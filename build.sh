@@ -2,8 +2,14 @@
 # exit on error
 set -o errexit
 
-# Install dependencies for Python
-pip install -r BackEnd/requirements.txt
+# Upgrade pip, setuptools, and wheel
+pip install --upgrade pip setuptools wheel
+
+# Install CPU-only PyTorch first to avoid memory limits and heavy GPU package compilation
+pip install torch --index-url https://download.pytorch.org/whl/cpu --prefer-binary
+
+# Install dependencies for Python, preferring precompiled binaries
+pip install -r BackEnd/requirements.txt --prefer-binary
 
 # Run migrations
 python BackEnd/manage.py migrate
